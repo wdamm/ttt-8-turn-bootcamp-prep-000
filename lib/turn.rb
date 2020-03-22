@@ -16,7 +16,9 @@ index = input_to_index(input)
 if valid_move?(board, index) == true
  move(board, index, charachter = "X")
  elsif valid_move?(board, index) == false
- puts "Please enter 1-9"
+ until valid_move?(board, index) == true
+ turn(board)
+ end
  end
  
  

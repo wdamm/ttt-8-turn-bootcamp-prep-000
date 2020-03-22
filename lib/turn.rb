@@ -15,10 +15,8 @@ index = input_to_index(input)
 
 if valid_move?(board, index) == true
  move(board, index, charachter = "X")
- elsif valid_move?(board, index) == false
- until valid_move?(board, index) == true
- turn(board)
- end
+ else
+   turn(board)
  end
  
  

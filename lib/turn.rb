@@ -12,7 +12,13 @@ def turn(board)
   puts "Please enter 1-9:"
  input = gets
 index = input_to_index(input)
-
+until valid_move?(board, index) == true
+puts "Please enter 1-9"
+turn(board)
+if valid_move?(board, index) == true
+  break
+end
+end
  move(board, index, charachter = "X")
 end
 
